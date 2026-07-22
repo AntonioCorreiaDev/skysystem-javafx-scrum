@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.isec.skysystem.view.pages.InspireMeView" stylesheets="@../css/ai_suggestions.css">
+
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom, #72CCD6,#DFF0F7 );" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="30.0" left="40.0" right="40.0" top="20.0" />
+         </padding>
+         <children>
+
+            <HBox alignment="CENTER_RIGHT" prefWidth="720.0" spacing="10.0">
+               <children>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="backButton" onAction="#handleBackButton" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-padding: 5;">
+                     <graphic>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+
+            <HBox alignment="CENTER_LEFT" prefWidth="720.0" spacing="10.0">
+               <children>
+                  <Label text="AI SUGGESTIONS" textFill="#00333e">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Button fx:id="refreshAllButton" mnemonicParsing="false" onAction="#handleRefreshAllButton" prefHeight="30.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;
+-fx-background-radius: 5; -fx-cursor: hand;" text="Refresh Suggestions">
+                     <effect>
+                        <DropShadow height="21.0" radius="10.0" width="21.0">
+                           <color>
+                              <Color opacity="0.25" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="preferencesButton" mnemonicParsing="false" onAction="#openPreferences" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #FFFFFF;
+-fx-background-radius: 5; -fx-cursor: hand;" text="Preferences">
+                     <effect>
+                        <DropShadow height="21.0" radius="10.0" width="21.0">
+                           <color>
+                              <Color opacity="0.25" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" opacity="0.67"
+                                   pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/settings.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent;
+-fx-background: transparent;" vbarPolicy="AS_NEEDED" VBox.vgrow="ALWAYS">
+               <content>
+                  <VBox fx:id="sugestoesContainerVBox" alignment="TOP_CENTER" spacing="15.0" style="-fx-background-color: transparent;" fillWidth="true" />
+               </content>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

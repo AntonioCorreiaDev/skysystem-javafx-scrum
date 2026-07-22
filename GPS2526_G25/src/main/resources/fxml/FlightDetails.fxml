@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ListView?>
+<VBox fx:id="cardRoot" prefWidth="850.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.isec.skysystem.view.pages.FlightCardController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="130.0" prefWidth="850.0" spacing="20.0">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <children>
+
+                <VBox fx:id="departureBox" prefHeight="100.0" prefWidth="320.0" spacing="8.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <Label fx:id="departureAirlineLabel" text="DEPARTURE">
+                                <font><Font name="System Bold" size="12.0" /></font>
+                                <style>-fx-text-fill: #42737A;</style>
+                            </Label>
+                            <Label fx:id="departureDateLabel" style="-fx-font-size: 12px; -fx-text-fill: #666666;" text="Tue, 18/11" />
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                            <VBox spacing="3.0">
+                                <Label fx:id="departureTimeLabel" style="-fx-text-fill: #333333;" text="10:00">
+                                    <font><Font name="System Bold" size="22.0" /></font>
+                                </Label>
+                                <Label fx:id="departureCityLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Lisbon" />
+                                <Label fx:id="departureAirportLabel" style="-fx-font-size: 10px; -fx-text-fill: #666666;" text="LIS" />
+                            </VBox>
+
+                            <VBox alignment="CENTER" spacing="2.0">
+                                <Label fx:id="departureDurationLabel" style="-fx-font-size: 11px; -fx-text-fill: #333333;" text="5h 30m" />
+                                <ImageView fitHeight="15.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/icons/arrow.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="departureStopsLabel" style="-fx-font-size: 10px; -fx-text-fill: #782323;" text="Direct" />
+                            </VBox>
+
+                            <VBox spacing="3.0">
+                                <Label fx:id="arrivalTimeLabel" style="-fx-text-fill: #333333;" text="15:30">
+                                    <font><Font name="System Bold" size="22.0" /></font>
+                                </Label>
+                                <Label fx:id="arrivalCityLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Paris" />
+                                <Label fx:id="arrivalAirportLabel" style="-fx-font-size: 10px; -fx-text-fill: #666666;" text="CDG" />
+                            </VBox>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <Pane prefWidth="1.0" style="-fx-background-color: #DDDDDD;" HBox.hgrow="NEVER" />
+
+                <VBox fx:id="returnBox" prefHeight="100.0" prefWidth="320.0" spacing="8.0">
+                    <children>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0">
+                            <Label fx:id="returnAirlineLabel" text="RETURN">
+                                <font><Font name="System Bold" size="12.0" /></font>
+                                <style>-fx-text-fill: #42737A;</style>
+                            </Label>
+                            <Label fx:id="returnDepartureDateLabel" style="-fx-font-size: 12px; -fx-text-fill: #666666;" text="Fri, 21/11" />
+                        </HBox>
+
+                        <HBox alignment="CENTER_LEFT" spacing="15.0">
+                            <VBox spacing="3.0">
+                                <Label fx:id="returnDepartureTimeLabel" style="-fx-text-fill: #333333;" text="16:00">
+                                    <font><Font name="System Bold" size="22.0" /></font>
+                                </Label>
+                                <Label fx:id="returnDepartureCityLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Paris" />
+                                <Label fx:id="returnDepartureAirportLabel" style="-fx-font-size: 10px; -fx-text-fill: #666666;" text="CDG" />
+                            </VBox>
+
+                            <VBox alignment="CENTER" spacing="2.0">
+                                <Label fx:id="returnDurationLabel" style="-fx-font-size: 11px; -fx-text-fill: #333333;" text="5h 00m" />
+                                <ImageView fitHeight="15.0" fitWidth="50.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/icons/arrow.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="returnStopsLabel" style="-fx-font-size: 10px; -fx-text-fill: #782323;" text="1 stop" />
+                            </VBox>
+
+                            <VBox spacing="3.0">
+                                <Label fx:id="returnArrivalTimeLabel" style="-fx-text-fill: #333333;" text="21:00">
+                                    <font><Font name="System Bold" size="22.0" /></font>
+                                </Label>
+                                <Label fx:id="returnArrivalCityLabel" style="-fx-font-size: 13px; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Lisbon" />
+                                <Label fx:id="returnArrivalAirportLabel" style="-fx-font-size: 10px; -fx-text-fill: #666666;" text="LIS" />
+                            </VBox>
+                        </HBox>
+                    </children>
+                </VBox>
+
+                <Pane HBox.hgrow="ALWAYS" />
+
+                <VBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="180.0" spacing="10.0">
+                    <children>
+                        <Label text="TOTAL PRICE">
+                            <font><Font size="10.0" /></font>
+                            <style>-fx-text-fill: #888888;</style>
+                        </Label>
+                        <Label fx:id="priceLabel" text="450,00 €">
+                            <font><Font name="System Bold" size="28.0" /></font>
+                            <style>-fx-text-fill: #42737A;</style>
+                        </Label>
+
+                        <HBox alignment="CENTER_RIGHT" spacing="10.0">
+                            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSaveAction" style="-fx-background-color: transparent; -fx-cursor: hand;">
+                                <graphic>
+                                    <ImageView fx:id="saveIcon" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                        <image>
+                                            <Image url="@../images/icons/heart.png" />
+                                        </image>
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+
+                            <Button fx:id="detailsButton" mnemonicParsing="false" onAction="#handleDetailsClick" style="-fx-background-color: #42737A; -fx-text-fill: #FFFFFF; -fx-background-radius: 5;" text="Details">
+                                <cursor><Cursor fx:constant="HAND" /></cursor>
+                            </Button>
+                        </HBox>
+                    </children>
+                    <padding>
+                        <Insets right="5.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </HBox>
+
+        <!-- Expandable Details Section (Initially Hidden) -->
+        <VBox fx:id="expandedDetailsSection" managed="false" visible="false" spacing="10.0" style="-fx-background-color: #F8F9FA; -fx-border-color: #E0E0E0; -fx-border-width: 1 0 0 0;">
+            <padding>
+                <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+            </padding>
+            <children>
+                
+                <!-- Outbound Flight Details -->
+                <HBox spacing="20.0" alignment="TOP_LEFT">
+                    <VBox spacing="5.0" prefWidth="320.0">
+                        <Label text="OUTBOUND FLIGHT" style="-fx-text-fill: #666666; -fx-font-size: 10px; -fx-font-weight: bold;" />
+                        <HBox spacing="5.0">
+                            <Label text="Airline:" style="-fx-text-fill: #666666; -fx-font-size: 11px;" />
+                            <Label fx:id="outboundAirlineNameLabel" text="TAP Portugal" style="-fx-text-fill: #333333; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <Label text="Flight Number:" style="-fx-text-fill: #666666; -fx-font-size: 11px;" />
+                            <Label fx:id="outboundFlightNumberLabel" text="TP123" style="-fx-text-fill: #333333; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <Label text="Aircraft:" style="-fx-text-fill: #666666; -fx-font-size: 11px;" />
+                            <Label fx:id="outboundAircraftLabel" text="Airbus A320" style="-fx-text-fill: #333333; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <Label text="Class:" style="-fx-text-fill: #666666; -fx-font-size: 11px;" />
+                            <Label fx:id="outboundClassLabel" text="Economy" style="-fx-text-fill: #333333; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                        </HBox>
+                    </VBox>
+                    
+                    <Pane prefWidth="1.0" visible="false" />
+
+                    <!-- Return Flight Details (shown only for round trips) -->
+                    <VBox fx:id="returnDetailsBox" spacing="5.0" prefWidth="320.0">
+                        <Label text="RETURN FLIGHT" style="-fx-text-fill: #666666; -fx-font-size: 10px; -fx-font-weight: bold;" />
+                        <HBox spacing="5.0">
+                            <Label text="Airline:" style="-fx-text-fill: #666666; -fx-font-size: 11px;" />
+                            <Label fx:id="returnAirlineNameLabel" text="TAP Portugal" style="-fx-text-fill: #333333; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <Label text="Flight Number:" style="-fx-text-fill: #666666; -fx-font-size: 11px;" />
+                            <Label fx:id="returnFlightNumberLabel" text="TP456" style="-fx-text-fill: #333333; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <Label text="Aircraft:" style="-fx-text-fill: #666666; -fx-font-size: 11px;" />
+                            <Label fx:id="returnAircraftLabel" text="Airbus A319" style="-fx-text-fill: #333333; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                        </HBox>
+                        <HBox spacing="5.0">
+                            <Label text="Class:" style="-fx-text-fill: #666666; -fx-font-size: 11px;" />
+                            <Label fx:id="returnClassLabel" text="Economy" style="-fx-text-fill: #333333; -fx-font-size: 11px; -fx-font-weight: bold;" />
+                        </HBox>
+                    </VBox>
+                </HBox>
+
+
+            <VBox spacing="5" style="-fx-padding: 10 0 0 0;">
+                <Label text="Histórico de Alterações" style="-fx-font-weight: bold; -fx-text-fill: #00333e;"/>
+
+                <ListView fx:id="historyListView" prefHeight="100.0"
+                          style="-fx-background-color: white; -fx-border-color: #e0e0e0;"/>
+            </VBox>
+
+            </children>
+        </VBox>
+
+    </children>
+</VBox>

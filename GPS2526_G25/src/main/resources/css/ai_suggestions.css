@@ -1,0 +1,73 @@
+/* * Importa o home.css para herdar estilos
+ * como .nav-bar, .logo-text, .icon-button, etc.
+ * Confirme que o caminho está correto.
+ */
+@import "home.css";
+
+/* * Fundo principal da página (o gradiente do FXML original)
+ */
+.main-background {
+    -fx-background-color: linear-gradient(to bottom, #72CCD6, #DFF0F7);
+}
+
+.content-area {
+    -fx-background-color: transparent;
+}
+
+/* * Título "AI SUGGESTIONS"
+ */
+.page-title {
+    -fx-font-size: 1.5em; /* 18px */
+    -fx-font-weight: bold;
+    -fx-text-fill: #00333E; /* Cor escura do mockup */
+}
+
+/* * Botão "Preferences"
+ */
+.preferences-button {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 5;
+    -fx-text-fill: #333333;
+    -fx-cursor: hand;
+    /* O DropShadow está definido diretamente no FXML */
+}
+
+.preferences-button:hover {
+    -fx-background-color: #F8F8F8;
+}
+
+/* * ========================================================
+ * ESTILOS DO LISTVIEW (A PARTE IMPORTANTE)
+ * ========================================================
+ */
+
+/* * Torna o fundo do próprio ListView transparente
+ */
+.suggestion-list {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+
+/* * Remove a borda azul de "foco" quando se clica
+ */
+.suggestion-list:focused {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+/* * Estilo de cada célula (item) na lista
+ */
+.suggestion-list .list-cell {
+    /* Torna o fundo de cada célula transparente */
+    -fx-background-color: transparent;
+
+    /* Remove a cor de seleção ao clicar */
+    -fx-cell-hover-color: transparent;
+    -fx-cell-selection-color: transparent;
+
+    /* Adiciona espaçamento (15px) ENTRE os cards */
+    -fx-padding: 0 0 15px 0;
+
+    /* Remove qualquer padding interno da célula */
+    -fx-insets: 0;
+}

@@ -1,0 +1,18 @@
+/* Budget TextField */
+.budget-text-field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-alignment: center-right;
+    -fx-padding: 0 15 0 2;
+}
+.budget-textfield:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+/* Símbolo do Euro */
+.euro-symbol {
+    -fx-text-fill: #666666;
+    -fx-font-size: 11px;
+    -fx-padding: 2 0 0 0;
+}
+

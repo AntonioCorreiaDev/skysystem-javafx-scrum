@@ -1,0 +1,177 @@
+/* ==========================================
+   ONBOARDING QUIZ STYLES
+   ========================================== */
+
+/* Root & Background */
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+    -fx-padding: 5px;
+}
+
+.quiz-background {
+    -fx-background-color: linear-gradient(to bottom, #72CCD6, #DFF0F7);
+}
+
+/* ===== TOP BAR ===== */
+
+.nav-bar {
+    -fx-background-color: #D3E8EB;
+}
+
+/* ===== MAIN CONTAINER ===== */
+
+.quiz-container {
+    -fx-background-color: linear-gradient(to bottom, #B4E5ED, #D3E8EB);
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2);
+}
+
+/* ===== TITLE ===== */
+
+.quiz-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1B6769;
+}
+
+/* ===== PROGRESS BAR ===== */
+
+.quiz-progress-bar {
+    -fx-accent: #1B6769;
+}
+
+.quiz-progress-bar > .track {
+    -fx-background-color: rgba(27, 103, 105, 0.3);
+    -fx-background-radius: 10px;
+}
+
+.quiz-progress-bar > .bar {
+    -fx-background-color: #1B6769;
+    -fx-background-radius: 10px;
+    -fx-padding: 4px;
+}
+
+.progress-text {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #1B6769;
+}
+
+/* ===== QUESTION BOX ===== */
+
+.question-box {
+    -fx-background-color: white;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-border-color: #72CCD6;
+    -fx-border-width: 2px;
+    -fx-padding: 15px 10px;
+}
+
+.question-text {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #333333;
+    -fx-text-alignment: center;
+}
+
+/* ===== OPTION BUTTONS ===== */
+
+.option-button {
+    -fx-background-color: #72CCD6;
+    -fx-background-radius: 7px;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-cursor: hand;
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+    -fx-border-radius: 7px;
+}
+
+.option-button:hover {
+    -fx-background-color: #5AB5C0;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.option-button:pressed {
+    -fx-background-color: #1B6769;
+}
+
+/* Selected state for option buttons */
+.option-button.selected {
+    -fx-background-color: #1B6769;
+    -fx-text-fill: white;
+    -fx-border-color: #0F4F51;
+    -fx-border-width: 3px;
+}
+
+/* ===== NAVIGATION BUTTONS ===== */
+
+.nav-button {
+    -fx-background-radius: 7px;
+    -fx-background-color: #1B6769;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-min-width: 100px;
+    -fx-padding: 10px 20px;
+}
+
+.nav-button:hover {
+    -fx-background-color: #0F4F51;
+}
+
+.nav-button:pressed {
+    -fx-background-color: #083335;
+}
+
+.nav-button:disabled {
+    -fx-background-color: #CCCCCC;
+    -fx-text-fill: #888888;
+    -fx-opacity: 0.6;
+    -fx-cursor: default;
+}
+
+/* ===== GRID LAYOUT ===== */
+
+.options-grid {
+    -fx-hgap: 30px;
+    -fx-vgap: 30px;
+}
+
+/* ===== TRANSITIONS ===== */
+
+.option-button,
+.nav-button {
+    -fx-transition: all 0.2s ease;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+@media (max-width: 800px) {
+    .quiz-container {
+        -fx-padding: 20px;
+    }
+
+    .quiz-title {
+        -fx-font-size: 18px;
+    }
+
+    .option-button {
+        -fx-font-size: 12px;
+        -fx-min-width: 150px;
+    }
+
+    .options-grid {
+        -fx-hgap: 15px;
+        -fx-vgap: 15px;
+    }
+}

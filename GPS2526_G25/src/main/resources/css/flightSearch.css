@@ -1,0 +1,116 @@
+/* ========================================
+   FLIGHT SEARCH VIEW STYLES
+   ======================================== */
+
+/* Contém o <VBox> do formulário (o painel com gradiente) */
+.search-form-container {
+    -fx-background-color: linear-gradient(to bottom, #CCEEF0, #D3E8EB);
+    -fx-background-radius: 10;
+    -fx-padding: 25px;
+    -fx-spacing: 15px; /* Espaçamento entre as HBox */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 2);
+}
+
+/* --- Inputs principais (TextField, DatePicker, ComboBox) --- */
+.text-field,
+.date-picker,
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #B0C4DE; /* Cor de borda suave */
+    -fx-border-width: 1px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-pref-height: 40px; /* Altura consistente */
+    -fx-prompt-text-fill: #999999;
+}
+
+.round-checkbox:selected > .box > .mark {
+    /* Estilo do Visto (mark) quando selecionado */
+    -fx-shape: "M7,2 A5,5 0 1,1 7,12 A5,5 0 1,1 7,2 M7,4 A3,3 0 1,1 7,10 A3,3 0 1,1 7,4"; /* Forma de círculo preenchido */
+    -fx-background-color: #42737A; /* Cor do círculo preenchido */
+    -fx-padding: 0.25em; /* Ajusta o tamanho do círculo interno */
+}
+
+.round-checkbox > .box {
+    /* Define o tamanho da caixa de seleção */
+    -fx-pref-width: 14px;
+    -fx-pref-height: 14px;
+
+    /* A chave para o fazer parecer redondo: alto border-radius */
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+
+    /* Configuração de cor e borda (opcional, ajusta a aparência) */
+    -fx-background-color: white;
+    -fx-border-color: #42737A; /* Cor da borda, correspondente ao seu Label */
+    -fx-border-width: 1.5px;
+}
+
+/* Foco nos inputs */
+.text-field:focused,
+.date-picker:focused,
+.combo-box:focused {
+    -fx-border-color: #42737A; /* Cor de destaque (do seu botão) */
+    -fx-border-width: 1.5px;
+}
+
+/* --- Botões de Opção (RadioButtons e CheckBox) --- */
+/* Para "Ida e volta", "Só ida" (use RadioButton no FXML) */
+.radio-button {
+    -fx-text-fill: #333;
+    -fx-font-size: 13px;
+}
+.radio-button .radio {
+    -fx-border-color: #42737A;
+    -fx-background-color: white;
+}
+.radio-button:selected .radio .dot {
+    -fx-background-color: #42737A; /* Cor de seleção */
+}
+
+/* Para "Voos diretos" (nonStopOnlyCheckBox) */
+.check-box {
+    -fx-text-fill: #333;
+    -fx-font-size: 13px;
+}
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #42737A;
+    -fx-border-radius: 3;
+}
+.check-box:selected .box .mark {
+    -fx-background-color: #42737A; /* Cor da marca */
+}
+
+/* --- Botões de Ação (Search / Reset) --- */
+/* Usamos Style Classes em vez de inline-style */
+.search-button {
+    -fx-background-color: #42737A;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-pref-height: 35px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+}
+.search-button:hover {
+    -fx-background-color: #528a94; /* Tom mais claro ao pairar */
+}
+
+.reset-button {
+    -fx-background-color: #782323;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5;
+    -fx-pref-height: 35px;
+    -fx-cursor: hand;
+}
+.reset-button:hover {
+    -fx-background-color: #9a3e3e; /* Tom mais claro ao pairar */
+}
+
+/* --- Lista de Resultados --- */
+.list-view {
+    -fx-background-color: transparent; /* Mantém o fundo transparente */
+}

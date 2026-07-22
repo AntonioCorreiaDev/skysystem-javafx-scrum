@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="Infinity" maxWidth="Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.isec.skysystem.view.pages.FlightSearchView">
+
+   <center>
+      <VBox style="-fx-background-color: linear-gradient(to bottom, #72CCD6,#DFF0F7 );" BorderPane.alignment="CENTER">
+         <children>
+
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0">
+               <padding>
+                  <Insets right="25.0" top="15.0" />
+               </padding>
+               <children>
+                  <Button fx:id="backButton" onAction="#handleBackButton" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-padding: 5;">
+                     <graphic>
+                        <ImageView fitHeight="15.0" fitWidth="15.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons/arrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+
+            <VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: linear-gradient(to bottom, #CCEEF0,#D3E8EB ); -fx-background-radius: 10;">
+               <VBox.margin>
+                  <Insets bottom="20.0" left="25.0" right="25.0" top="0.0" />
+               </VBox.margin>
+               <children>
+
+                  <HBox alignment="CENTER_LEFT" prefHeight="25.0" spacing="20.0">
+                     <children>
+                        <RadioButton fx:id="roundTripRadio" selected="true" text="Round Trip">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="tripTypeGroup" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="oneWayRadio" text="One Way" toggleGroup="$tripTypeGroup" />
+                        <CheckBox fx:id="isDirectCheckBox" mnemonicParsing="false" selected="true" text="Direct fligth" />
+                        <Pane HBox.hgrow="ALWAYS" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="15.0" top="15.0" />
+                     </padding>
+                  </HBox>
+
+                  <HBox alignment="CENTER" prefHeight="40.0" spacing="10.0">
+                     <padding>
+                        <Insets left="15.0" right="15.0" />
+                     </padding>
+                     <children>
+                        <!-- From Field + Error -->
+                        <VBox spacing="2.0" HBox.hgrow="ALWAYS" minWidth="200.0">
+                           <TextField fx:id="fromLabel" promptText="From..."  maxWidth="Infinity" />
+                           <Label fx:id="fromErrorLabel" style="-fx-text-fill: #d32f2f; -fx-font-size: 11px; -fx-font-weight: bold; -fx-padding: 0 0 0 5;" managed="false" visible="false" />
+                        </VBox>
+
+                        <!-- Arrow Icon -->
+                        <VBox alignment="TOP_CENTER" prefWidth="18.0">
+                           <ImageView fitHeight="22.0" fitWidth="22.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                              <image>
+                                 <Image url="@../images/icons/arrow.png" />
+                              </image>
+                           </ImageView>
+                        </VBox>
+
+                        <!-- To Field + Error -->
+                        <VBox spacing="2.0" HBox.hgrow="ALWAYS" minWidth="200.0">
+                           <TextField fx:id="ToLabel" promptText="To..."  maxWidth="Infinity" />
+                           <Label fx:id="toErrorLabel" style="-fx-text-fill: #d32f2f; -fx-font-size: 11px; -fx-font-weight: bold; -fx-padding: 0 0 0 5;" managed="false" visible="false" />
+                        </VBox>
+
+                        <!-- Departure Date + Error -->
+                        <VBox spacing="2.0" HBox.hgrow="ALWAYS">
+                           <DatePicker fx:id="DepartureDate" promptText="Departure" maxWidth="Infinity" />
+                           <Label fx:id="departureDateErrorLabel" style="-fx-text-fill: #d32f2f; -fx-font-size: 11px; -fx-font-weight: bold; -fx-padding: 0 0 0 5;" managed="false" visible="false" />
+                        </VBox>
+
+                        <!-- Return Date + Error -->
+                        <VBox spacing="2.0" HBox.hgrow="ALWAYS">
+                           <DatePicker fx:id="ReturnDate" promptText="Return" maxWidth="Infinity" />
+                           <Label fx:id="returnDateErrorLabel" style="-fx-text-fill: #d32f2f; -fx-font-size: 11px; -fx-font-weight: bold; -fx-padding: 0 0 0 5;" managed="false" visible="false" />
+                        </VBox>
+                     </children>
+                  </HBox>
+
+                   <HBox alignment="CENTER" prefHeight="25.0" spacing="10.0">
+                       <children>
+                           <TextField fx:id="BudgetLabel" prefHeight="25.0" promptText="Budget €" HBox.hgrow="ALWAYS" />
+
+                           <TextField fx:id="airlineFilterField" promptText="Airline" HBox.hgrow="ALWAYS" />
+
+                           <Spinner fx:id="passengersSpinner" editable="false" prefWidth="120" HBox.hgrow="ALWAYS" />
+
+                           <ComboBox fx:id="sortCriterionComboBox" prefWidth="200.0" minWidth="200.0" maxWidth="Infinity" promptText="Order by:" HBox.hgrow="ALWAYS">
+                               <items>
+                                   <FXCollections fx:factory="observableArrayList">
+                                       <String fx:value="Price Ascending" />
+                                       <String fx:value="Price Descending" />
+                                       <String fx:value="Duration" />
+                                       <String fx:value="Flight Time" />
+                                   </FXCollections>
+                               </items>
+                           </ComboBox>
+                       </children>
+                       <padding>
+                           <Insets left="15.0" right="15.0" />
+                       </padding>
+                   </HBox>
+
+                  <HBox alignment="CENTER_RIGHT" prefHeight="25.0" spacing="20.0">
+                     <children>
+                        <Button fx:id="SearchButton" mnemonicParsing="false" onAction="#handleSearchButtonAction" style="-fx-background-color: #42737A; -fx-text-fill: #FFFFFF;" text="SEARCH FLIGTH">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                        <Pane HBox.hgrow="ALWAYS" />
+                        <Button fx:id="ResetButton" mnemonicParsing="false" onAction="#handleResetButtonAction" style="-fx-background-color: #782323; -fx-text-fill: #FFFFFF;" text="RESET" textAlignment="CENTER">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="15.0" left="15.0" right="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+
+            <VBox alignment="TOP_CENTER" prefWidth="Infinity" spacing="10.0" VBox.vgrow="ALWAYS">
+               <padding>
+                  <Insets bottom="20.0" left="25.0" right="25.0" top="10.0" />
+               </padding>
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="15.0">
+                     <children>
+                        <Label fx:id="topFlightOffersLabel" style="-fx-text-fill: #42737A;" text="TOP FLIGHT OFFERS">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+
+                        <Pane HBox.hgrow="ALWAYS" />
+
+                     </children>
+                  </HBox>
+
+                   <!-- Loading Indicator -->
+                   <VBox fx:id="loadingContainer" alignment="CENTER" spacing="10.0" managed="false" visible="false">
+                      <ProgressIndicator fx:id="loadingIndicator" prefHeight="50.0" prefWidth="50.0" />
+                      <Label fx:id="loadingLabel" style="-fx-text-fill: #42737A; -fx-font-size: 12px;" text="Searching for flights..." />
+                   </VBox>
+
+                  <ListView fx:id="flightOffersList" prefHeight="400.0" prefWidth="Infinity" VBox.vgrow="ALWAYS" />
+                  <Label fx:id="noResultsLabel" alignment="CENTER" style="-fx-text-fill: #42737A; -fx-font-size: 14px;" text="No trips were found matching the selected search criteria." textAlignment="CENTER" VBox.vgrow="ALWAYS" managed="false" visible="false" />
+
+
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

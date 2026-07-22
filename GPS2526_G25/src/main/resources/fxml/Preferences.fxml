@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.Cursor?>
+
+<VBox minHeight="400.0" minWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.isec.skysystem.view.pages.PreferencesView">
+
+    <VBox alignment="TOP_CENTER" spacing="5.0" style="-fx-background-color: linear-gradient(to bottom,#72CCD6, #DFF0F7);" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+        </padding>
+        <children>
+
+            <HBox alignment="TOP_RIGHT">
+                <children>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button fx:id="backButton" onAction="#handleBackButton" style="-fx-background-color: transparent; -fx-cursor: hand; -fx-padding: 5;">
+                        <graphic>
+                            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../images/icons/arrow.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                    </Button>
+                </children>
+            </HBox>
+
+            <Label text="YOUR TRAVEL PREFERENCES" textAlignment="CENTER" textFill="#255462">
+                <VBox.margin>
+                    <Insets bottom="15.0" />
+                </VBox.margin>
+                <font>
+                    <Font name="System Bold" size="16.0" />
+                </font>
+            </Label>
+
+            <HBox spacing="20.0" maxWidth="1200.0" alignment="TOP_LEFT">
+
+                <VBox spacing="20.0" HBox.hgrow="ALWAYS">
+
+                    <VBox spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #EDFDFF, #D3E8EB);
+-fx-background-radius: 10;">
+                        <padding>
+                            <Insets bottom="15.0" left="14.0" right="14.0" top="15.0" />
+                        </padding>
+                        <children>
+                            <Label text="TRAVEL STYLE">
+                                <font>
+                                    <Font name="System Bold" size="11.0" />
+                                </font>
+                            </Label>
+                            <FlowPane hgap="15.0" vgap="10.0">
+                                <children>
+                                    <HBox fx:id="btnMountain" alignment="CENTER_LEFT" onMouseClicked="#handleTravelStyleClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF;
+-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6; -fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="15.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/montanha.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Mountain">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnCity" alignment="CENTER_LEFT" onMouseClicked="#handleTravelStyleClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6;
+-fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="14.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/cidade.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="City">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnBeach" alignment="CENTER_LEFT" onMouseClicked="#handleTravelStyleClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6; -fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="15.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/beach.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Beach">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnCountrySide" alignment="CENTER_LEFT" onMouseClicked="#handleTravelStyleClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6;
+-fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="12.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/acampamento.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="CountrySide">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </FlowPane>
+                        </children>
+                    </VBox>
+
+                    <VBox spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #EDFDFF, #D3E8EB);
+-fx-background-radius: 10;">
+                        <padding>
+                            <Insets bottom="15.0" left="14.0" right="14.0" top="15.0" />
+                        </padding>
+                        <children>
+                            <Label text="TRAVEL COMPANY">
+                                <font>
+                                    <Font name="System Bold" size="11.0" />
+                                </font>
+                            </Label>
+                            <FlowPane hgap="15.0" vgap="10.0">
+                                <children>
+                                    <HBox fx:id="btnSolo" alignment="CENTER_LEFT" onMouseClicked="#handleTravelCompanyClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF;
+-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6; -fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="15.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/solo.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Solo">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnFriends" alignment="CENTER_LEFT" onMouseClicked="#handleTravelCompanyClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6;
+-fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="14.0" fitWidth="13.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/friends.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Friends">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnCouple" alignment="CENTER_LEFT" onMouseClicked="#handleTravelCompanyClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6; -fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="13.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/couple.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Couple">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnFamily" alignment="CENTER_LEFT" onMouseClicked="#handleTravelCompanyClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6;
+-fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="12.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/family.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Family">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </FlowPane>
+                        </children>
+                    </VBox>
+
+                    <VBox spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #EDFDFF, #D3E8EB);
+-fx-background-radius: 10;">
+                        <padding>
+                            <Insets bottom="15.0" left="14.0" right="14.0" top="15.0" />
+                        </padding>
+                        <children>
+                            <Label text="WEATHER">
+                                <font>
+                                    <Font name="System Bold" size="11.0" />
+                                </font>
+                            </Label>
+                            <FlowPane hgap="15.0" vgap="10.0">
+                                <children>
+                                    <HBox fx:id="btnHot" alignment="CENTER_LEFT" onMouseClicked="#handleWeatherClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF;
+-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6; -fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="15.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/brilho-do-sol.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Hot">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnWarm" alignment="CENTER_LEFT" onMouseClicked="#handleWeatherClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6;
+-fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="14.0" fitWidth="13.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/cloud.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Warm">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnNoPreferences" alignment="CENTER_LEFT" onMouseClicked="#handleWeatherClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6; -fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="13.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/nopreferences.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="No Preferences">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnSnowy" alignment="CENTER_LEFT" onMouseClicked="#handleWeatherClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6;
+-fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="12.0" fitWidth="15.0" opacity="0.57" pickOnBounds="true" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/flocos-de-neve.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Snowy">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </FlowPane>
+                        </children>
+                    </VBox>
+
+                    <VBox spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #EDFDFF, #D3E8EB);
+-fx-background-radius: 10;">
+                        <padding>
+                            <Insets bottom="15.0" left="14.0" right="14.0" top="15.0" />
+                        </padding>
+                        <children>
+                            <Label text="ACTIVITY LEVEL">
+                                <font>
+                                    <Font name="System Bold" size="11.0" />
+                                </font>
+                            </Label>
+                            <FlowPane hgap="15.0" vgap="10.0">
+                                <children>
+                                    <HBox fx:id="btnRelaxed" alignment="CENTER_LEFT" onMouseClicked="#handleActivityLevelClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF;
+-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6; -fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="14.0" fitWidth="14.0" opacity="0.57" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/resting.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Relaxed">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnModerate" alignment="CENTER_LEFT" onMouseClicked="#handleActivityLevelClick" spacing="5.0"
+                                          style="-fx-background-color: #FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6;
+-fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="14.0" fitWidth="14.0" opacity="0.57" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/footstep.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="Moderate">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+
+                                    <HBox fx:id="btnHigh" alignment="CENTER_LEFT" onMouseClicked="#handleActivityLevelClick" spacing="5.0"
+                                          style="-fx-background-color:
+#FFFFFF; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6; -fx-cursor: hand;">
+                                        <padding>
+                                            <Insets bottom="4.0" left="8.0" right="8.0" top="4.0" />
+                                        </padding>
+                                        <children>
+                                            <ImageView fitHeight="14.0" fitWidth="14.0" opacity="0.57" preserveRatio="true">
+                                                <image>
+                                                    <Image url="@../images/icons/mountain-hiking.png" />
+                                                </image>
+                                            </ImageView>
+                                            <Label text="High">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Label>
+                                        </children>
+                                    </HBox>
+                                </children>
+                            </FlowPane>
+                        </children>
+                    </VBox>
+                </VBox>
+
+                <VBox spacing="20.0" prefWidth="500.0" minWidth="450.0">
+
+                    <VBox spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #EDFDFF, #D3E8EB);
+-fx-background-radius: 10;">
+                        <padding>
+                            <Insets bottom="15.0" left="14.0" right="14.0" top="15.0" />
+                        </padding>
+                        <children>
+                            <Label text="BUDGET">
+                                <font>
+                                    <Font name="System Bold" size="11.0" />
+                                </font>
+                            </Label>
+                            <HBox alignment="CENTER_LEFT" spacing="10.0">
+                                <children>
+                                    <Slider fx:id="budgetSlider" max="1000.0" HBox.hgrow="ALWAYS">
+                                        <cursor>
+                                            <Cursor fx:constant="DEFAULT" />
+                                        </cursor>
+                                    </Slider>
+                                    <AnchorPane fx:id="BudgetLabel" prefHeight="18.0" prefWidth="55.0"
+                                                style="-fx-background-color: #FFFFFF;
+-fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #72CCD6;" />
+                                </children>
+                            </HBox>
+                        </children>
+                    </VBox>
+
+                    <VBox spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #EDFDFF, #D3E8EB); -fx-background-radius: 10;" VBox.vgrow="ALWAYS">
+                        <padding>
+                            <Insets bottom="15.0" left="14.0" right="14.0" top="15.0" />
+                        </padding>
+                        <children>
+                            <Label text="TAGS">
+                                <font>
+                                    <Font name="System Bold" size="11.0" />
+                                </font>
+                            </Label>
+                            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent;
+-fx-background: transparent;" VBox.vgrow="ALWAYS">
+                                <content>
+                                    <FlowPane fx:id="tagsContainer" hgap="8" vgap="8" />
+                                </content>
+                            </ScrollPane>
+
+                            <HBox spacing="5.0" alignment="CENTER_LEFT">
+                                <TextField fx:id="newTagField" promptText="Add a tag..." HBox.hgrow="ALWAYS"/>
+                                <Button text="Add" fx:id="addTagButton" onAction="#handleAddTag"/>
+                            </HBox>
+
+                        </children>
+                    </VBox>
+
+                </VBox>
+            </HBox>
+
+        </children>
+    </VBox>
+
+
+
+</VBox>

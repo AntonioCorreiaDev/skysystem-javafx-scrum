@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" styleClass="root-container" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.isec.skysystem.view.pages.LoginController">
+
+    <!-- Background Image Container -->
+    <StackPane fx:id="heroContainer" styleClass="hero-container">
+        <ImageView fitHeight="${heroContainer.height}" fitWidth="${heroContainer.width}" opacity="0.8" preserveRatio="false">
+            <Image url="@../images/airplane-silhouette.jpg" />
+        </ImageView>
+
+        <!-- Overlay -->
+        <Pane styleClass="hero-overlay" />
+    </StackPane>
+
+    <!-- Login Card -->
+    <VBox alignment="CENTER" maxHeight="450.0" maxWidth="400.0" spacing="20.0" style="-fx-background-color: rgba(255, 255, 255, 0.9); -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);">
+        <padding>
+            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+        </padding>
+
+        <Label style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #1B6769;" text="Sky System" />
+        <Label style="-fx-font-size: 14px; -fx-text-fill: #555555;" text="Sign in to continue your journey" />
+
+        <Pane minHeight="20.0" />
+
+        <VBox spacing="10.0" alignment="CENTER_LEFT">
+            <Label style="-fx-text-fill: #1B6769; -fx-font-weight: bold;" text="Email" />
+            <TextField fx:id="emailField" promptText="Enter your email" style="-fx-background-color: #F0F8FF; -fx-text-fill: #333333; -fx-background-radius: 5; -fx-padding: 10; -fx-border-color: #B0E0E6; -fx-border-radius: 5;" />
+        </VBox>
+
+        <VBox spacing="10.0" alignment="CENTER_LEFT">
+            <Label style="-fx-text-fill: #1B6769; -fx-font-weight: bold;" text="Password" />
+            <PasswordField fx:id="passwordField" promptText="Enter your password" style="-fx-background-color: #F0F8FF; -fx-text-fill: #333333; -fx-background-radius: 5; -fx-padding: 10; -fx-border-color: #B0E0E6; -fx-border-radius: 5;" />
+        </VBox>
+
+        <Label fx:id="errorLabel" style="-fx-text-fill: #D32F2F;" wrapText="true" />
+
+        <Button onAction="#handleLogin" maxWidth="Infinity" style="-fx-background-color: #1B6769; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 10; -fx-cursor: hand;" text="LOGIN" />
+
+        <Hyperlink onAction="#handleRegisterLink" style="-fx-text-fill: #1B6769;" text="Don't have an account? Create one" />
+
+    </VBox>
+
+</StackPane>

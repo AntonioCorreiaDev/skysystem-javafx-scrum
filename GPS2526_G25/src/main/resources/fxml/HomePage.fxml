@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane prefHeight="600.0" prefWidth="900.0" styleClass="root-container" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pt.isec.skysystem.view.pages.HomePageView">
+
+    <StackPane fx:id="heroContainer" styleClass="hero-container">
+        <ImageView fx:id="heroBackground" fitHeight="${heroContainer.height}" fitWidth="${heroContainer.width}" opacity="0.8" preserveRatio="false">
+            <image>
+                <Image url="@../images/airplane-silhouette.jpg" />
+            </image>
+        </ImageView>
+
+        <Pane styleClass="hero-overlay" />
+
+        <VBox alignment="CENTER" spacing="10" styleClass="hero-text-container" translateX="50" translateY="130">
+            <Label fx:id="heroMainText" styleClass="hero-text-main" text="Your Journey Starts Here." />
+            <Label styleClass="hero-text-sub" text="Explore the world with AI-powered recommendations." />
+        </VBox>
+    </StackPane>
+
+    <VBox alignment="TOP_LEFT" maxWidth="350.0" styleClass="sidebar" StackPane.alignment="CENTER_LEFT">
+        <padding>
+            <Insets bottom="30" left="40" right="40" top="40" />
+        </padding>
+
+        <Pane prefHeight="140.0" />
+
+        <VBox alignment="CENTER_LEFT" spacing="15">
+            <Button fx:id="dashboardButton" onAction="#handleDashboardButton" styleClass="menu-button" text="DASHBOARD" />
+            <Button fx:id="searchButton" onAction="#handleSearchButton" styleClass="menu-button" text="FLIGHT SEARCH" />
+            <Button fx:id="quizButton" onAction="#handleQuizButton" styleClass="menu-button" text="QUIZ" />
+            <Button fx:id="askAiButton" onAction="#handleAskAiButton" styleClass="menu-button" text="AI ASSISTANT" />
+            <Button fx:id="preferencesButton" onAction="#handlePreferencesButton" styleClass="menu-button" text="PREFERENCES" />
+
+            <Pane prefHeight="30.0" />
+
+        </VBox>
+
+        <Pane VBox.vgrow="ALWAYS" />
+
+        <Button fx:id="logoutButton" onAction="#handleLogoutButton" styleClass="menu-button, menu-button-exit" text="LOGOUT" />
+        <Label styleClass="version-label" text="v2.0.18 • SkySystem" />
+    </VBox>
+
+    <HBox alignment="CENTER" pickOnBounds="false" spacing="15" StackPane.alignment="TOP_CENTER">
+        <padding>
+            <Insets bottom="420" />
+        </padding>
+        <Label styleClass="main-page-title" text="SKYSYSTEM" textAlignment="CENTER" />
+    </HBox>
+
+</StackPane>

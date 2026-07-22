@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\GPS2526_G25",
+    "\\GPS2526_G25\\src",
+    "\\GPS2526_G25\\src\\test",
+    "\\GPS2526_G25\\src\\test\\java",
+    "\\GPS2526_G25\\src\\test\\java\\pt",
+    "\\GPS2526_G25\\src\\test\\java\\pt\\isec",
+    "\\GPS2526_G25\\src\\test\\java\\pt\\isec\\skysystem",
+    "\\GPS2526_G25\\src\\test\\java\\pt\\isec\\skysystem\\model",
+    "\\GPS2526_G25\\src\\test\\java\\pt\\isec\\skysystem\\model\\data"
+  ],
+  "SelectedNode": "\\GPS2526_G25\\src\\test\\java\\pt\\isec\\skysystem\\viewmodel\\FlightSearchViewModelTest.java",
+  "PreviewInSolutionExplorer": false
+}

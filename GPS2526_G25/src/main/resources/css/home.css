@@ -1,0 +1,99 @@
+/* ==========================================
+   GAME MENU / DESKTOP APP STYLES (Aqua/Teal Bright Theme)
+   ========================================== */
+
+.root {
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+.root-container {
+    /* Base light blue from other views, for a brighter feel */
+    -fx-background-color: #DFF0F7;
+}
+
+/* ===== SIDEBAR (AQUA FADE) ===== */
+
+.sidebar {
+    /* Gradient: Starts with the main application color (#72CCD6) and fades to transparent */
+    -fx-background-color: linear-gradient(to right,
+    rgb(124, 222, 232) 0%, /* Opaque Aqua */
+    rgba(124, 222, 232, 0.95) 40%,
+    rgba(114, 204, 214, 0.0) 100%); /* Fully transparent */
+    -fx-border-width: 0;
+}
+
+.version-label {
+    -fx-text-fill: #345c61; /* Darker teal for footer text */
+    -fx-font-size: 10px;
+    -fx-opacity: 0.8;
+}
+
+/* ===== BIG MAIN TITLE (TOP CENTER) ===== */
+
+.main-page-title {
+    -fx-font-size: 80px;
+    -fx-font-weight: 900;
+    -fx-text-fill: #FFFFFF; /* Dark Teal for strong readability */
+    -fx-letter-spacing: 8px;
+    -fx-font-style: italic;
+
+    /* Subtle shadow */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 3);
+}
+
+/* ===== MENU BUTTONS ===== */
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1B6769; /* Dark Teal for contrast on the light-aqua sidebar */
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10px 20px 10px 0px;
+    -fx-cursor: hand;
+    -fx-border-width: 0 0 0 3px;
+    -fx-border-color: transparent;
+    -fx-transition: all 0.2s ease;
+}
+
+.menu-button:hover {
+    -fx-text-fill: #004D40; /* Even darker teal on hover */
+    -fx-border-color: #00796B; /* Darker teal accent on hover */
+    -fx-padding: 10px 20px 10px 15px;
+}
+
+.menu-button-active {
+    -fx-text-fill: #004D40;
+    -fx-border-color: #004D40;
+}
+
+.menu-button-exit:hover {
+    -fx-text-fill: #D32F2F; /* Dark Red for exit */
+    -fx-border-color: #D32F2F;
+}
+
+/* ===== HERO SECTION ===== */
+
+.hero-container {
+    -fx-background-color: #DFF0F7;
+}
+
+.hero-overlay {
+    /* Darker, saturated overlay to bring back depth, using the core theme colors */
+    -fx-background-color: linear-gradient(to bottom,
+    rgba(69, 250, 255, 0.75) 0%, /* Dark Teal, less opaque at top */
+    rgba(69, 250, 250, 0.2) 70%); /* Dark Teal, more opaque at bottom */
+}
+
+.hero-text-main {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF; /* White text looks better against the dark teal overlay */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 15, 0, 0, 4);
+}
+
+.hero-text-sub {
+    -fx-font-size: 16px;
+    -fx-text-fill: #E0F7FA; /* Lightest blue for subtle contrast */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 8, 0, 0, 3);
+}
